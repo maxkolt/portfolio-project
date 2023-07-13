@@ -6,9 +6,9 @@
     </v-btn>
 
     <v-spacer></v-spacer>
-    <v-btn text @click="scroll('home')" class="text-yellow">Home</v-btn>
-    <v-btn text @click="scroll('about')">About</v-btn>
-    <v-btn text @click="scroll('portfolio')">Portfolio</v-btn>
+    <v-btn text @click="scroll('home')" class="text-yellow">Главная</v-btn>
+    <v-btn text @click="scroll('about')">Обо мне</v-btn>
+    <v-btn text @click="scroll('portfolio')">Портфолио</v-btn>
     <v-btn text @click="scroll('services')"> Services</v-btn>
     <v-btn text @click="scroll('page')"> Page</v-btn>
     <v-btn text @click="scroll('biog')"> Biog</v-btn>
