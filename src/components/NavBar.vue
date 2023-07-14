@@ -2,17 +2,14 @@
   <v-app-bar app color="black" dark flat class="px-12">
     <v-btn>
       <v-icon color="yellow" left class="mr-2">fas fa-signature</v-icon>
-      M.K
+      <h3>M.K</h3>
     </v-btn>
 
     <v-spacer></v-spacer>
     <v-btn text @click="scroll('home')" class="text-yellow">Главная</v-btn>
     <v-btn text @click="scroll('about')">Обо мне</v-btn>
     <v-btn text @click="scroll('portfolio')">Портфолио</v-btn>
-    <v-btn text @click="scroll('services')"> Services</v-btn>
-    <v-btn text @click="scroll('page')"> Page</v-btn>
-    <v-btn text @click="scroll('biog')"> Biog</v-btn>
-    <v-btn text @click="scroll('contact')"> Contact</v-btn>
+    <v-btn text @click="scroll('contact')">Контакты</v-btn>
   </v-app-bar>
 </template>
 
