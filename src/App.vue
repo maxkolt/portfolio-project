@@ -179,12 +179,12 @@
           <v-row>
             <v-col cols="12" sm="4">
               <v-card class="mx-auto" max-width="344" height="">
-                <v-img src="i10.jpg" height="200px" cover></v-img>
+                <v-img src="project1.jpg" height="200px" cover></v-img>
 
-                <v-card-title> We provide you the best</v-card-title>
+                <v-card-title>Проект MOVE-APP</v-card-title>
 
                 <v-card-subtitle>
-                  By AAE IdeaPro | 06 Sep 2022
+                  Реализован | 25 Авг 2021
                 </v-card-subtitle>
                 <v-card-text>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
@@ -194,12 +194,12 @@
             </v-col>
             <v-col cols="12" sm="4">
               <v-card class="mx-auto" max-width="344" height="">
-                <v-img src="i11.jpg" height="200px" cover></v-img>
+                <v-img src="project3.jpg" height="200px" cover></v-img>
 
-                <v-card-title> We provide you the best</v-card-title>
+                <v-card-title>Проект YOUR-SHOP</v-card-title>
 
                 <v-card-subtitle>
-                  By AAE IdeaPro | 06 Sep 2022
+                  Реализован | 02 Фев 2023
                 </v-card-subtitle>
                 <v-card-text>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
@@ -209,12 +209,12 @@
             </v-col>
             <v-col cols="12" sm="4">
               <v-card class="mx-auto" max-width="344" height="">
-                <v-img src="i12.jpg" height="200px" cover></v-img>
+                <v-img src="project2.jpg" height="200px" cover></v-img>
 
-                <v-card-title> We provide you the best</v-card-title>
+                <v-card-title>Проект FURNITURE </v-card-title>
 
                 <v-card-subtitle>
-                  By AAE IdeaPro | 06 Sep 2022
+                  Реализован | 06 Сен 2022
                 </v-card-subtitle>
                 <v-card-text>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
@@ -229,11 +229,9 @@
         <div class="hire">
           <v-row>
             <v-col cols="12" sm="8">
-              <h1 class="mt-9">Hire me for your awesome project</h1>
+              <h1 class="mt-9">Возьми меня в свою команду</h1>
               <p class="text-grey">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
-                itaque, eaque molestiae deleniti, earum voluptate eos id dicta
-                at, blanditiis
+                Вместе мы будет создавть крутые проекты, вдохновляться новыми идеями и развивать IT индустрию
               </p>
             </v-col>
             <v-col cols="12" sm="4">
@@ -314,12 +312,13 @@
         </v-row>
       </v-col>
     </v-container>
+    <FooterView/>
   </v-app>
 </template>
 
 <script>
 import {defineComponent} from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import FooterView from './components/FooterView.vue'
 import NavBar from "./components/NavBar.vue";
 
 export default defineComponent({
@@ -331,22 +330,22 @@ export default defineComponent({
 
       items: [
         {
-          img: "diplom1.png",
+          img: "diplom1.jpeg",
         },
         {
-          img: "diplom1.png",
+          img: "diplom2.jpeg",
         },
         {
-          img: "diplom1.png",
+          img: "diplom3.jpeg",
         },
         {
-          img: "diplom1.png",
+          img: "diplom6.jpeg",
         },
         {
-          img: "diplom1.png",
+          img: "diplom4.jpeg",
         },
         {
-          img: "diplom1.png",
+          img: "diplom5.jpeg",
         },
       ],
     };
@@ -368,7 +367,7 @@ export default defineComponent({
 
   components: {
     NavBar,
-    HelloWorld,
+    FooterView,
   },
 
 })
