@@ -145,13 +145,12 @@
       </v-col>
       <v-col cols="12" sm="12" id="services">
         <div class="d-flex justify-center mb-6">
-          <v-btn color="#FBDF7E" class="mr-2">All</v-btn>
-          <v-btn class="mr-2" variant="tonal">Web Design</v-btn>
-          <v-btn class="mr-2" variant="tonal">Front Design</v-btn>
-          <v-btn class="mr-2" variant="tonal"> Photography</v-btn>
-          <v-btn variant="tonal"> Illustration</v-btn>
+          <v-btn color="#FBDF7E" class="mr-2">Все</v-btn>
+          <v-btn class="mr-2" variant="tonal">Дипломы</v-btn>
+          <v-btn class="mr-2" variant="tonal">Сертификаты</v-btn>
         </div>
       </v-col>
+
       <v-col cols="12" class="imgHover">
         <v-row class="fill-height" align="center" justify="center">
           <template v-for="(item, i) in items" :key="i">
@@ -169,11 +168,17 @@
           </template>
         </v-row>
       </v-col>
-      <v-col cols="12" sm="12">
-        <div class="d-flex justify-center mb-6">
-          <v-btn color="#FBDF7E" class="mt-4">Load More</v-btn>
+
+      <v-col class="text-center mt-16">
+        <h2 class="mt-16">Мои проекты</h2>
+        <div style="width: 120px; margin: 0 auto" >
+          <v-slider
+              v-model="slider3"
+              color="yellow"
+          ></v-slider>
         </div>
       </v-col>
+
       <v-col cols="12" id="page">
         <div class="pre">
           <v-row>
@@ -224,6 +229,7 @@
           </v-row>
         </div>
       </v-col>
+
       <v-col cols="12" id="biog">
         <div class="hire">
           <v-row>
@@ -249,20 +255,22 @@
                   color=""
                   class="mt-10"
                   variant="outlined"
+                  @click="openMap"
               ></v-btn
               >
               <br/>
-              <span class="text-caption">ул.Большая Академическая д47к1 </span
-              ><br/>
+              <span class="text-caption">{{ address }}</span>
+              <br/>
               <v-btn
                   icon="fas fa-phone-alt"
                   color=""
                   class="mt-10"
                   variant="outlined"
+                  @click="makeCall"
               ></v-btn
               >
               <br/>
-              <span class="text-caption" :href="callLink">8-925 5961151 </span> <br/>
+              <span class="text-caption">{{ phoneNumber }}</span> <br/>
               <span class="text-caption">8-916 1493356 </span> <br/>
 
               <v-btn
@@ -318,7 +326,7 @@
 </template>
 
 <script>
-import {computed, defineComponent, ref} from "vue";
+import {defineComponent} from "vue";
 import FooterView from './FooterView.vue'
 import NavBar from "./NavBar.vue";
 
@@ -327,38 +335,29 @@ export default defineComponent({
   name: "BodyView",
   setup() {
     return {
-      email: '12345kolt@gmail.com', // Ваш адрес электронной почты
+      address: 'ул.Большая Академическая д47к1',
+      phoneNumber: '8-925 5961151',
+      email: '12345kolt@gmail.com',
       slider2: 50,
       slider1: 70,
+      slider3: 100,
 
       items: [
-        {
-          img: "diplom1.jpeg",
-        },
-        {
-          img: "diplom2.jpeg",
-        },
-        {
-          img: "diplom3.jpeg",
-        },
-        {
-          img: "diplom6.jpeg",
-        },
-        {
-          img: "diplom4.jpeg",
-        },
-        {
-          img: "diplom5.jpeg",
-        },
-      ],
-    };
+        {img: "diplom1.jpeg"},
+        {img: "diplom2.jpeg"},
+        {img: "diplom3.jpeg"},
+        {img: "diplom6.jpeg"},
+        {img: "diplom4.jpeg"},
+        {img: "diplom5.jpeg"},
+      ]
+    }
   },
+
   methods: {
     scroll(refName) {
       const element = document.getElementById(refName);
       element.scrollIntoView({behavior: "smooth"});
     },
-
     downloadResume() {
       const resumeUrl = 'https://hh.ru/resume_converter/%D0%9A%D0%BE%D0%BB%D1%82%D0%BE%D0%B2%D0%B8%D1%87%20%D0%9C%D0%B0%D0%BA%D1%81%D0%B8%D0%BC%20%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B5%D0%B2%D0%B8%D1%87.pdf?hash=7073f035ff0b574cd40039ed1f52695872526f&type=pdf&hhtmSource=resume&hhtmFrom=';
       const link = document.createElement('a');
@@ -368,13 +367,14 @@ export default defineComponent({
     },
     sendEmail() {
       window.location.href = `mailto:${this.email}`;
-    }
-  },
-  computed: {
-    callLink() {
-      const phoneNumber = '89255961151'; // Ваш номер телефона
-      return `tel:${phoneNumber}`;
     },
+    makeCall() {
+      window.location.href = `tel:${this.phoneNumber}`;
+    },
+    openMap() {
+      const mapUrl = `https://www.google.com/maps/search/${encodeURIComponent(this.address)}`;
+      window.open(mapUrl, '_blank');
+    }
   },
 
   components: {
