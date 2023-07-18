@@ -150,7 +150,6 @@
           <v-btn class="mr-2" variant="tonal">Сертификаты</v-btn>
         </div>
       </v-col>
-
       <v-col cols="12" class="imgHover">
         <v-row class="fill-height" align="center" justify="center">
           <template v-for="(item, i) in items" :key="i">
@@ -168,26 +167,22 @@
           </template>
         </v-row>
       </v-col>
-
       <v-col class="text-center mt-16">
         <h2 class="mt-16">Мои проекты</h2>
-        <div style="width: 120px; margin: 0 auto" >
+        <div style="width: 120px; margin: 0 auto">
           <v-slider
               v-model="slider3"
               color="yellow"
           ></v-slider>
         </div>
       </v-col>
-
       <v-col cols="12" id="page">
         <div class="pre">
           <v-row>
             <v-col cols="12" sm="4">
               <v-card class="mx-auto" max-width="344" height="">
                 <v-img src="project1.jpg" height="200px" cover></v-img>
-
                 <v-card-title>Проект MOVE-APP</v-card-title>
-
                 <v-card-subtitle>
                   Реализован | 25 Авг 2021
                 </v-card-subtitle>
@@ -199,9 +194,7 @@
             <v-col cols="12" sm="4">
               <v-card class="mx-auto" max-width="344" height="">
                 <v-img src="project3.jpg" height="200px" cover></v-img>
-
                 <v-card-title>Проект YOUR-SHOP</v-card-title>
-
                 <v-card-subtitle>
                   Реализован | 02 Фев 2023
                 </v-card-subtitle>
@@ -214,9 +207,7 @@
             <v-col cols="12" sm="4">
               <v-card class="mx-auto" max-width="344" height="">
                 <v-img src="project2.jpg" height="200px" cover></v-img>
-
                 <v-card-title>Проект FURNITURE</v-card-title>
-
                 <v-card-subtitle>
                   Реализован | 06 Сен 2022
                 </v-card-subtitle>
@@ -229,7 +220,6 @@
           </v-row>
         </div>
       </v-col>
-
       <v-col cols="12" id="biog">
         <div class="hire">
           <v-row>
@@ -424,7 +414,7 @@ export default defineComponent({
 .egg {
   display: block;
   margin-left: 100px;
-  margin-top: 170px;
+  margin-top: 50px;
   width: 356px;
   height: 300px;
   background-color: #fbdf7e;
@@ -440,7 +430,7 @@ export default defineComponent({
 
 .child {
   display: inline-block;
-  padding: 2rem 5rem;
+  padding: 2rem 1rem;
   vertical-align: middle;
   text-align: center;
   margin-right: 8px;
