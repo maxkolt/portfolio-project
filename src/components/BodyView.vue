@@ -1,6 +1,5 @@
 <template>
   <v-app id="home">
-    <NavBar/>
     <v-container fluid>
       <div class="head">
         <v-row>
@@ -235,6 +234,7 @@
           </v-row>
         </div>
       </v-col>
+
       <v-col cols="12" sm="12" class="px-16" id="contact">
         <v-row>
           <v-col cols="12" sm="4">
@@ -319,6 +319,7 @@
 import {defineComponent} from "vue";
 import FooterView from './FooterView.vue'
 import NavBar from "./NavBar.vue";
+import DialogWindow from './DialogWindow.vue';
 
 
 export default defineComponent({
@@ -370,6 +371,7 @@ export default defineComponent({
   components: {
     NavBar,
     FooterView,
+    DialogWindow
   }
 })
 </script>
