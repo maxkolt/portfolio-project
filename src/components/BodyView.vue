@@ -149,6 +149,7 @@
           <v-btn class="mr-2" variant="tonal">Сертификаты</v-btn>
         </div>
       </v-col>
+
       <v-col cols="12" class="imgHover">
         <v-row class="fill-height" align="center" justify="center">
           <template v-for="(item, i) in items" :key="i">
@@ -229,12 +230,12 @@
               </p>
             </v-col>
             <v-col cols="12" sm="4">
-              <v-btn color="#FBDF7E" class="mt-15">Напиши мне</v-btn>
+              <DialogWindow/>
+              <!--              <v-btn color="#FBDF7E" class="mt-15">Напиши мне</v-btn>-->
             </v-col>
           </v-row>
         </div>
       </v-col>
-
       <v-col cols="12" sm="12" class="px-16" id="contact">
         <v-row>
           <v-col cols="12" sm="4">
@@ -262,7 +263,6 @@
               <br/>
               <span class="text-caption">{{ phoneNumber }}</span> <br/>
               <span class="text-caption">8-916 1493356 </span> <br/>
-
               <v-btn
                   icon="fas fa-envelope"
                   color=""
@@ -318,8 +318,7 @@
 <script>
 import {defineComponent} from "vue";
 import FooterView from './FooterView.vue'
-import NavBar from "./NavBar.vue";
-import DialogWindow from './DialogWindow.vue';
+import DialogWindow from "./DialogWindow.vue";
 
 
 export default defineComponent({
@@ -369,9 +368,8 @@ export default defineComponent({
   },
 
   components: {
-    NavBar,
+    DialogWindow,
     FooterView,
-    DialogWindow
   }
 })
 </script>
@@ -416,7 +414,7 @@ export default defineComponent({
 .egg {
   display: block;
   margin-left: 100px;
-  margin-top: 50px;
+  margin-top: 170px;
   width: 356px;
   height: 300px;
   background-color: #fbdf7e;
@@ -432,7 +430,7 @@ export default defineComponent({
 
 .child {
   display: inline-block;
-  padding: 2rem 1rem;
+  padding: 2rem 5rem;
   vertical-align: middle;
   text-align: center;
   margin-right: 8px;
