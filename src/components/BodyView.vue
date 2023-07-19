@@ -142,31 +142,7 @@
           <v-divider></v-divider>
         </div>
       </v-col>
-      <v-col cols="12" sm="12" id="services">
-        <div class="d-flex justify-center mb-6">
-          <v-btn color="#FBDF7E" class="mr-2">Все</v-btn>
-          <v-btn class="mr-2" variant="tonal">Дипломы</v-btn>
-          <v-btn class="mr-2" variant="tonal">Сертификаты</v-btn>
-        </div>
-      </v-col>
-
-      <v-col cols="12" class="imgHover">
-        <v-row class="fill-height" align="center" justify="center">
-          <template v-for="(item, i) in items" :key="i">
-            <v-col cols="12" md="4">
-              <v-hover v-slot="{ isHovering, props }">
-                <v-card
-                    :elevation="isHovering ? 12 : 2"
-                    :class="{ 'on-hover': isHovering }"
-                    v-bind="props"
-                >
-                  <v-img :src="item.img" height="225px"></v-img>
-                </v-card>
-              </v-hover>
-            </v-col>
-          </template>
-        </v-row>
-      </v-col>
+      <PortfolioView/>
       <v-col class="text-center mt-16">
         <h2 class="mt-16">Мои проекты</h2>
         <div style="width: 120px; margin: 0 auto">
@@ -220,7 +196,7 @@
           </v-row>
         </div>
       </v-col>
-      <v-col cols="12" id="biog">
+      <v-col class="mt-2" cols="12" id="biog">
         <div class="hire">
           <v-row>
             <v-col cols="12" sm="8">
@@ -231,12 +207,11 @@
             </v-col>
             <v-col cols="12" sm="4">
               <DialogWindow/>
-              <!--              <v-btn color="#FBDF7E" class="mt-15">Напиши мне</v-btn>-->
             </v-col>
           </v-row>
         </div>
       </v-col>
-      <v-col cols="12" sm="12" class="px-16" id="contact">
+      <v-col cols="12" sm="12" class="px-16 mt-16" id="contact">
         <v-row>
           <v-col cols="12" sm="4">
             <div class="child">
@@ -280,10 +255,10 @@
             <h1 class="mt-8">Отправить сообщение</h1>
             <v-divider></v-divider>
             <span class="text-caption"
-            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-              fugiat officia, odio eaque exercitationem libero nesciunt placeat,
-              repellat obcaecati sed tenetur! Est labore aliquam amet
-              consequatur necessitatibus fugit obcaecati facilis!</span
+            >Благодаря различным вариантам связи,
+              вы можете выбрать наиболее удобный способ общения со мной.
+              Я всегда рад помочь и ответить на ваши вопросы.
+            </span
             >
             <v-row class="mt-10">
               <v-col cols="12" sm="6">
@@ -319,6 +294,7 @@
 import {defineComponent} from "vue";
 import FooterView from './FooterView.vue'
 import DialogWindow from "./DialogWindow.vue";
+import PortfolioView from "./PortfolioView.vue";
 
 
 export default defineComponent({
@@ -331,15 +307,9 @@ export default defineComponent({
       slider2: 50,
       slider1: 70,
       slider3: 100,
-
-      items: [
-        {img: "diplom1.jpeg"},
-        {img: "diplom2.jpeg"},
-        {img: "diplom3.jpeg"},
-        {img: "diplom6.jpeg"},
-        {img: "diplom4.jpeg"},
-        {img: "diplom5.jpeg"},
-      ]
+      tempName: '',
+      tempPhoneNumber: '',
+      tempMessage: '',
     }
   },
 
@@ -368,6 +338,7 @@ export default defineComponent({
   },
 
   components: {
+    PortfolioView,
     DialogWindow,
     FooterView,
   }
@@ -436,13 +407,8 @@ export default defineComponent({
   margin-right: 8px;
 }
 
-.imgHover {
-  padding: 0 200px;
-}
-
 .pre {
   width: 100%;
-  height: 380px;
   text-align: center;
   padding: 0 200px;
   background-color: #f5f5f5;
