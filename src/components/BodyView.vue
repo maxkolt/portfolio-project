@@ -51,18 +51,18 @@
                     color="yellow"
                 ></v-slider>
               </div>
-              <h4 class="mt-n4">Я креативный веб-дизайнер и разработчик</h4>
+              <h3 class="mt-n4">Я креативный веб-дизайнер и разработчик</h3>
               <br/>
-              <p class="text-grey">
+              <h4 class="text-grey">
                 Имея более чем трех лет опыта в этой области, я обладаю глубокими знаниями HTML, CSS и JavaScript, а
                 также
                 опытом работы с современными фреймворками и библиотеками, такими как Vue.js и TypeScript. Моими сильными
                 сторонами являются внимательность к деталям, способность работать в команде и
                 стремление к постоянному самосовершенствованию. Я ищу возможность применить свои навыки и креативность в
                 динамичной команде разработчиков.
-              </p>
+              </h4>
               <br/>
-              <p class="text-grey">
+              <h4 class="text-grey">
                 Я стремлюсь к разработке веб-приложений, которые обеспечивают отличный пользовательский опыт и являются
                 функциональными и масштабируемыми. Мой подход к разработке включает использование передовых технологий,
                 лучших практик и аккуратного кодирования. Я умею эффективно взаимодействовать с дизайнерами и
@@ -71,7 +71,7 @@
                 того, я открыт к изучению новых технологий и готов к постоянному профессиональному росту. Если вы ищете
                 опытного frontend-разработчика, который может привнести инновации и качество в вашу команду, я готов
                 взяться за новые вызовы.
-              </p>
+              </h4>
               <v-btn tile dark color="yellow" class="mt-4" @click="downloadResume">
                 Скачать резюме
               </v-btn>
@@ -164,6 +164,7 @@
                 </v-card-subtitle>
                 <v-card-text>
                   Удобное приложение для поиска, отслеживания, рекомендации и оценки фильмов.
+                  Большой выбор современных киноновинок.
                 </v-card-text>
               </v-card>
             </v-col>
@@ -293,9 +294,8 @@
 <script>
 import {defineComponent} from "vue";
 import FooterView from './FooterView.vue'
-import DialogWindow from "./DialogWindow.vue";
 import PortfolioView from "./PortfolioView.vue";
-
+import DialogWindow from "./DialogWindow.vue";
 
 export default defineComponent({
   name: "BodyView",
@@ -338,8 +338,8 @@ export default defineComponent({
   },
 
   components: {
-    PortfolioView,
     DialogWindow,
+    PortfolioView,
     FooterView,
   }
 })
