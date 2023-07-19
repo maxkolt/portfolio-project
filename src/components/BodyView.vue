@@ -1,6 +1,5 @@
 <template>
   <v-app id="home">
-    <NavBar/>
     <v-container fluid>
       <div class="head">
         <v-row>
@@ -168,26 +167,22 @@
           </template>
         </v-row>
       </v-col>
-
       <v-col class="text-center mt-16">
         <h2 class="mt-16">Мои проекты</h2>
-        <div style="width: 120px; margin: 0 auto" >
+        <div style="width: 120px; margin: 0 auto">
           <v-slider
               v-model="slider3"
               color="yellow"
           ></v-slider>
         </div>
       </v-col>
-
       <v-col cols="12" id="page">
         <div class="pre">
           <v-row>
             <v-col cols="12" sm="4">
               <v-card class="mx-auto" max-width="344" height="">
                 <v-img src="project1.jpg" height="200px" cover></v-img>
-
                 <v-card-title>Проект MOVE-APP</v-card-title>
-
                 <v-card-subtitle>
                   Реализован | 25 Авг 2021
                 </v-card-subtitle>
@@ -199,9 +194,7 @@
             <v-col cols="12" sm="4">
               <v-card class="mx-auto" max-width="344" height="">
                 <v-img src="project3.jpg" height="200px" cover></v-img>
-
                 <v-card-title>Проект YOUR-SHOP</v-card-title>
-
                 <v-card-subtitle>
                   Реализован | 02 Фев 2023
                 </v-card-subtitle>
@@ -214,9 +207,7 @@
             <v-col cols="12" sm="4">
               <v-card class="mx-auto" max-width="344" height="">
                 <v-img src="project2.jpg" height="200px" cover></v-img>
-
                 <v-card-title>Проект FURNITURE</v-card-title>
-
                 <v-card-subtitle>
                   Реализован | 06 Сен 2022
                 </v-card-subtitle>
@@ -229,7 +220,6 @@
           </v-row>
         </div>
       </v-col>
-
       <v-col cols="12" id="biog">
         <div class="hire">
           <v-row>
@@ -240,7 +230,8 @@
               </p>
             </v-col>
             <v-col cols="12" sm="4">
-              <v-btn color="#FBDF7E" class="mt-15">Напиши мне</v-btn>
+              <DialogWindow/>
+              <!--              <v-btn color="#FBDF7E" class="mt-15">Напиши мне</v-btn>-->
             </v-col>
           </v-row>
         </div>
@@ -272,7 +263,6 @@
               <br/>
               <span class="text-caption">{{ phoneNumber }}</span> <br/>
               <span class="text-caption">8-916 1493356 </span> <br/>
-
               <v-btn
                   icon="fas fa-envelope"
                   color=""
@@ -328,7 +318,7 @@
 <script>
 import {defineComponent} from "vue";
 import FooterView from './FooterView.vue'
-import NavBar from "./NavBar.vue";
+import DialogWindow from "./DialogWindow.vue";
 
 
 export default defineComponent({
@@ -378,7 +368,7 @@ export default defineComponent({
   },
 
   components: {
-    NavBar,
+    DialogWindow,
     FooterView,
   }
 })
