@@ -31,7 +31,7 @@ export default {
 }
 
 .custom-icon {
-  font-size: 18px;
+  font-size: 15px;
   cursor: pointer;
   top: 50%;
   left: 50%;
