@@ -365,6 +365,12 @@ export default defineComponent({
   color: white;
 }
 
+@media (max-width: 600px) {
+  .head {
+    padding: 0; /* Убираем padding для мобильных устройств */
+  }
+}
+
 .head:before {
   content: "";
   position: absolute;
