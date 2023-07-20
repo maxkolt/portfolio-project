@@ -17,12 +17,11 @@ export default {
   }
 }
 </script>
-<style>
 
+<style>
 body {
   margin: 0;
   font-family: "Roboto-Condensed-Light", "ui-sans-serif";
 }
-
 </style>
 

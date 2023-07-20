@@ -156,7 +156,7 @@
         <div class="pre">
           <v-row>
             <v-col cols="12" sm="4">
-              <v-card class="mx-auto" max-width="344" height="">
+              <v-card class="mx-auto" max-width="344" height="" @click="openLinkOne">
                 <v-img src="project1.jpg" height="200px" cover></v-img>
                 <v-card-title>Проект MOVE-APP</v-card-title>
                 <v-card-subtitle>
@@ -169,7 +169,7 @@
               </v-card>
             </v-col>
             <v-col cols="12" sm="4">
-              <v-card class="mx-auto" max-width="344" height="">
+              <v-card class="mx-auto" max-width="344" height="" @click="openLinkTwo">
                 <v-img src="project3.jpg" height="200px" cover></v-img>
                 <v-card-title>Проект YOUR-SHOP</v-card-title>
                 <v-card-subtitle>
@@ -182,7 +182,7 @@
               </v-card>
             </v-col>
             <v-col cols="12" sm="4">
-              <v-card class="mx-auto" max-width="344" height="">
+              <v-card class="mx-auto" max-width="344" height="" @click="openLinkThree">
                 <v-img src="project2.jpg" height="200px" cover></v-img>
                 <v-card-title>Проект FURNITURE</v-card-title>
                 <v-card-subtitle>
@@ -299,6 +299,8 @@ import DialogWindow from "./DialogWindow.vue";
 
 export default defineComponent({
   name: "BodyView",
+  components: {FooterView, DialogWindow, PortfolioView},
+
   setup() {
     return {
       address: 'ул.Большая Академическая д47к1',
@@ -334,13 +336,16 @@ export default defineComponent({
     openMap() {
       const mapUrl = `https://www.google.com/maps/search/${encodeURIComponent(this.address)}`;
       window.open(mapUrl, '_blank');
+    },
+    openLinkOne() {
+      window.open('https://github.com/maxkolt/movie-app', '_blank');
+    },
+    openLinkTwo() {
+      window.open('https://github.com/maxkolt/your-shop', '_blank');
+    },
+    openLinkThree() {
+      window.open('https://github.com/maxkolt/furnitureWebsiteOnJS', '_blank');
     }
-  },
-
-  components: {
-    DialogWindow,
-    PortfolioView,
-    FooterView,
   }
 })
 </script>
