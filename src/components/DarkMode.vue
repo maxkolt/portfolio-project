@@ -1,12 +1,12 @@
 <template>
   <v-app class="icon ml-4">
-    <v-icon
-        style="color: #626060"
+    <v-btn
+        style="color: white"
         class="custom-icon"
         icon="fa-solid fa-circle-half-stroke"
         @click="toggleTheme"
     >
-    </v-icon>
+    </v-btn>
   </v-app>
 </template>
 
@@ -31,7 +31,7 @@ export default {
 }
 
 .custom-icon {
-  font-size: 32px;
+  font-size: 18px;
   cursor: pointer;
   top: 50%;
   left: 50%;
