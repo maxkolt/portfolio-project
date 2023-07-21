@@ -155,7 +155,7 @@
       <v-col cols="12" id="page">
         <div class="pre">
           <v-row>
-            <v-col cols="12" sm="4">
+            <v-col cols="12" sm="4" class="">
               <v-card class="mx-auto" max-width="344" height="" @click="openLinkOne">
                 <v-img src="project1.jpg" height="200px" cover></v-img>
                 <v-card-title>Проект MOVE-APP</v-card-title>
@@ -365,12 +365,6 @@ export default defineComponent({
   color: white;
 }
 
-@media (max-width: 600px) {
-  .head {
-    padding: 0; /* Убираем padding для мобильных устройств */
-  }
-}
-
 .head:before {
   content: "";
   position: absolute;
@@ -434,6 +428,10 @@ export default defineComponent({
 }
 
 @media (max-width: 768px) {
+  .head {
+    padding: 0;
+  }
+
   .egg {
     margin-left: auto;
     margin-right: auto;
@@ -453,6 +451,26 @@ export default defineComponent({
   .mobile-styles {
     margin-top: 150px;
     margin-left: -20px;
+  }
+
+  .first {
+    display: contents;
+  }
+
+  .pre {
+    display: contents;
+  }
+
+  .hire {
+    display: contents;
+  }
+
+  .child {
+    display: contents;
+  }
+
+  .mt-4 {
+    margin-left: 0 !important;
   }
 }
 
