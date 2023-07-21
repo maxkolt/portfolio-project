@@ -9,8 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@fortawesome/free-regular-svg-icons": "^6.4.0",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@mdi/font": "5.9.55",
     "@types/yandex-maps": "^2.1.29",
     "roboto-fontface": "*",
