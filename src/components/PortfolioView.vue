@@ -1,5 +1,5 @@
 <template>
-  <v-col cols="12" sm="12" mt="16" class="mt-16" id="services">
+  <v-col cols="12" sm="12" mt="16" class="mt-16" id="portfolio">
     <div class="d-flex justify-center mb-6">
       <v-btn class="mr-2" color="#FBDF7E" @click="showAll">Все</v-btn>
       <v-btn class="mr-2" variant="tonal" @click="showDiplomas">Дипломы</v-btn>

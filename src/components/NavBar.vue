@@ -10,7 +10,7 @@
 
     <v-spacer v-if="isMobile"></v-spacer>
 
-    <v-btn>
+    <v-btn @click="scroll('home')">
       <v-icon color="yellow" left class="mr-2">fas fa-signature</v-icon>
       <h3>M.K</h3>
     </v-btn>
