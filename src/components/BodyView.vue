@@ -8,7 +8,7 @@
               <h1 class="text-grey">Привет!</h1>
               <h2 class="text-white">Меня зовут Максим Колтович</h2>
               <span class="text-grey">Я frontend-разработчик</span><br/>
-              <v-btn text @click="scroll('contact')" dark class="text-yellow mt-8" variant="outlined">
+              <v-btn text @click="scroll('contact')" dark class="text-yellow btn-link mt-8" variant="outlined">
                 Связаться
               </v-btn>
             </div>
@@ -30,7 +30,7 @@
           </v-col>
           <v-col cols="5">
             <div style="position: relative; z-index: 9999" class="mt-16">
-              <v-img src="raboti.png" contain max-height="300"></v-img>
+              <v-img class="mobile-styles" src="raboti.png" contain max-height="300"></v-img>
             </div>
           </v-col>
         </v-row>
@@ -432,4 +432,38 @@ export default defineComponent({
   background-color: #e9e9e9;
   margin-top: -24px;
 }
+
+@media (max-width: 768px) {
+  .egg {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    width: 350px;
+    height: 300px;
+  }
+
+  .btn-link {
+    z-index: 9999;
+    position: absolute;
+    top: 100%;
+    left: 87%;
+
+  }
+
+  .mobile-styles {
+    margin-top: 150px;
+    margin-left: -20px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .egg {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    width: 300px;
+    height: 300px;
+  }
+}
+
 </style>
