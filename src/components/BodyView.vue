@@ -267,7 +267,6 @@
                     label="Ф.И.О"
                     persistent-hint
                     variant="outlined"
-                    ref="fullNameInput"
                 ></v-text-field>
               </v-col>
               <v-col cols="12" sm="6">
@@ -275,17 +274,15 @@
                     label="Номер тел."
                     persistent-hint
                     variant="outlined"
-                    ref="phoneNumberInput"
                 ></v-text-field>
               </v-col>
             </v-row>
             <v-textarea
-                ref="messageInput"
                 label="Сообщение"
                 persistent-hint
                 variant="outlined"
             ></v-textarea>
-            <v-btn color="#FBDF7E" class="mt-2" @click="sendMessage">Отправить</v-btn>
+            <v-btn color="#FBDF7E" class="mt-2">Отправить</v-btn>
           </v-col>
         </v-row>
       </v-col>
@@ -345,20 +342,11 @@ export default defineComponent({
     },
     openLinkThree() {
       window.open('https://github.com/maxkolt/furnitureWebsiteOnJS', '_blank');
-    },
-    sendMessage() {
-      // Ваш код для отправки данных
-
-      // После отправки, очищаем данные полей
-      this.$refs.messageInput = null;
-      this.$refs.fullNameInput = null;
-      this.$refs.phoneNumberInput = null;
-
-    },
-  }
+    }
+  },
 })
 </script>
 
 <style scoped>
-@import "src/assets/body-vuew.css";
+@import "../assets/body-vuew.css";
 </style>
