@@ -88,7 +88,7 @@
           ></v-slider>
         </div>
       </div>
-      <v-col cols="12" class="padd">
+      <v-col cols="12">
         <div class="first" id="project">
           <v-row>
             <v-col cols="12">
@@ -343,7 +343,7 @@ export default defineComponent({
     openLinkThree() {
       window.open('https://github.com/maxkolt/furnitureWebsiteOnJS', '_blank');
     }
-  },
+  }
 })
 </script>
 

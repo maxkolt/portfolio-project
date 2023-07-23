@@ -1,7 +1,7 @@
 <template>
   <v-app-bar app color="black" dark flat class="px-12" style="">
     <v-btn
-        icon="fa-brands fa-react"
+        icon="fa-solid fa-bars"
         color="yellow"
         @click="toggleNav"
         class="burger-btn"
