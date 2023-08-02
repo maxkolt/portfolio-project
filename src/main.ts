@@ -5,7 +5,6 @@ import App from './App.vue'
 import vuetify from './plugins/vuetify'
 // @ts-ignore
 import {loadFonts} from './plugins/webfontloader'
-
 loadFonts()
 
 createApp(App)
