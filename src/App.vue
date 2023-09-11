@@ -1,8 +1,5 @@
 <template>
   <v-app>
-    <router-link to="/other-app" class="bottom-left-link">
-      <img :src="imagePath" style="height: 60px; cursor:pointer" alt="img">
-    </router-link>
     <NavBar/>
     <BodyView/>
   </v-app>
@@ -20,7 +17,6 @@ export default {
   },
   data() {
     return {
-      imagePath: 'few clouds.png'
     }
   }
 }
@@ -39,7 +35,5 @@ body {
   bottom: 20px;
   left: 15px;
 }
-
-
 </style>
 
