@@ -10,5 +10,5 @@ export default defineConfig({
 		vue(),
 		vuetify({ autoImport: true }),
 	],
-	base: 'portfolio-project'
+	base: `/portfolio-project/`
 })
