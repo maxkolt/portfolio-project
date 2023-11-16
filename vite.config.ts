@@ -6,9 +6,9 @@ import vuetify from 'vite-plugin-vuetify'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    base: 'portfolio-project',
     plugins: [
         vue(),
         vuetify({autoImport: true}),
     ],
+    base: "/portfolio-project"
 })
