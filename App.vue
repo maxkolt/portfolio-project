@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import BodyView from "./components/BodyView.vue";
-import NavBar from "./components/NavBar.vue";
+import BodyView from "./src/components/BodyView.vue";
+import NavBar from "./src/components/NavBar.vue";
 
 export default {
   name: 'App',
